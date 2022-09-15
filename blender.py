@@ -27,7 +27,8 @@ def init():
     for iteration in range(1,iteration_max):
         print(" =========== ITERATION {} ==========".format(iteration))
         for passes in range(1,rule_passes):
-            file_loc = '/Users/endiymeraj/Documents/Projects/3D Cellular Automata/out/ca_p' + str(passes) + '_i' + str(iteration) + '.obj'
+            project_path = 'your project path'
+            file_loc = project_path + 'out/ca_p' + str(passes) + '_i' + str(iteration) + '.obj'
             if os.path.exists(file_loc):
                 imported_object = bpy.ops.import_scene.obj(filepath=file_loc)
                 ob = bpy.context.selected_objects[0] ####<--Fix
